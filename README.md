@@ -1,4 +1,5 @@
 # 🖤 Hyprland Rice Setup
+<img width="1600" height="900" alt="image" src="https://github.com/user-attachments/assets/df88cc99-63cb-4552-89e1-043475183426" />
 
 A clean and customizable **Hyprland-based desktop configuration** featuring Waybar, Kitty, Rofi, Wofi, and more — built for performance and aesthetics.
 
