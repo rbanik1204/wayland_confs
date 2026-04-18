@@ -7,21 +7,20 @@
     font-size: 14px;
     font-weight: 600;
     min-height: 0;
-    color: @surface_container_highest ;
+    color: @on_surface;
 }
 
 window#waybar {
     background: transparent;
-    /*border-bottom: 3px solid rgba(100, 114, 125, 0.5);*/
 }
 
 tooltip {
-    background: rgba(43, 48, 59, 0.5);
-    border: 1px solid rgba(100, 114, 125, 0.5);
+    background: @surface_container;
+    border: 1px solid @outline_variant;
 }
 
 tooltip label {
-    color: white;
+    color: @on_surface;
 }
 
 #workspaces {
@@ -32,20 +31,20 @@ tooltip label {
     padding: 0.3rem 0.6rem;
     margin: 0.4rem 0.25rem;
     border-radius: 6px;
-    background-color: @primary;
-
+    background-color: @surface_container_high;
+    color: @on_surface_variant;
 }
 
 #workspaces button:hover {
-    color: #1e1e2e;
+    background-color: @surface_container_highest;
+    color: @on_surface;
 }
 
 #workspaces button.active {
-    background-color: #1e1e2e;
+    background-color: @primary_container;
     padding: 0 15px;
-    color: #89b4fa;
+    color: @on_primary_container;
 }
-
 
 #mode,
 #clock,
@@ -54,16 +53,18 @@ tooltip label {
 }
 
 #mode {
-    background: #64727D;
-    border-bottom: 3px solid white;
+    background: @surface_container_high;
+    border-bottom: 3px solid @outline;
 }
 
 #clock,
 #clock.simpleclock {
-    background-color: @primary;
+    background-color: @surface_container;
+    border: 1px solid @outline_variant;
     border-radius: 10px;
     margin-top: 5px;
     margin-left: 5px;
+    color: @primary;
 }
 
 #mpris {
@@ -71,113 +72,124 @@ tooltip label {
     margin-top: 5px;
     margin-left: 5px;
     border-radius: 6px;
-    /* background-color: #181825; */
-    background-color: @primary
+    background-color: @surface_container;
+    border: 1px solid @outline_variant;
+    color: @on_surface;
 }
 
 #mpris.playing {
-    color: #739395;
+    color: @tertiary;
 }
 
 #mpris.paused {
-    color: #2d45a2;
-}
-
-@keyframes blink {
-    to {
-        background-color: @primary;
-        color: black;
-    }
+    color: @outline;
 }
 
 #window {
     padding-left: 10px;
     padding-right: 10px;
     margin-top: 5px;
-    color: black;
+    color: @on_surface_variant;
+    font-style: italic;
 }
 
 window#waybar.empty #window {
     background-color: transparent;
 }
 
-
 #custom-notification {
     padding: 0 10px;
-    background-color: @primary;
+    background-color: @surface_container;
+    border: 1px solid @outline_variant;
     margin: 0 10px;
-    color: black;
+    color: @tertiary;
     border-radius: 10px;
     margin-top: 5px;
 }
 
 #tray {
     padding: 0 10px;
-    background-color: @primary;
+    background-color: @surface_container;
+    border: 1px solid @outline_variant;
     margin: 0 10px;
-    color: black;
     border-radius: 10px;
     margin-top: 5px;
 }
 
+#tray > .passive {
+    -gtk-icon-effect: dim;
+}
+
+#tray > .needs-attention {
+    -gtk-icon-effect: highlight;
+    background-color: @error_container;
+    border-color: @error;
+}
+
 #custom-powered {
     padding: 0 10px;
-    background-color: @primary;
+    background-color: @error_container;
+    border: 1px solid @error_container;
     margin: 0 10px;
-    color: black;
+    color: @error;
     border-radius: 10px;
     margin-top: 5px;
 }
 
 #memory {
     padding: 0 10px;
-    background-color: @primary;
+    background-color: @surface_container;
+    border: 1px solid @outline_variant;
     margin: 0 10px;
-    color: black;
+    color: @secondary;
     border-radius: 10px;
     margin-top: 5px;
-
 }
 
 #cpu {
     padding: 0 10px;
-    background-color: @primary;
+    background-color: @surface_container;
+    border: 1px solid @outline_variant;
     margin: 0 10px;
-    color: black;
+    color: @tertiary;
     border-radius: 10px;
     margin-top: 5px;
+}
+
+#cpu.warning {
+    color: @error;
+}
+
+#cpu.critical {
+    color: @on_error_container;
+    background-color: @error_container;
+    border-color: @error_container;
 }
 
 #pulseaudio {
     padding: 0 10px;
-    background-color: @primary;
+    background-color: @surface_container;
+    border: 1px solid @outline_variant;
     margin: 0 10px;
-    color: black;
+    color: @on_surface;
     border-radius: 10px;
     margin-top: 5px;
-
 }
 
-#custom-power {
+#pulseaudio.muted {
+    color: @outline;
+}
+
+#custom-network {
     padding: 0 10px;
-    background-color: @primary;
+    background-color: @surface_container;
+    border: 1px solid @outline_variant;
     margin: 0 10px;
-    color: black;
-    border-radius: 10px;
-    margin-top: 5px;
-
-}
-
-#network {
-    padding: 0 10px;
-    background-color: @primary;
-    margin: 0 10px;
-    color: black;
+    color: @on_surface;
     border-radius: 10px;
     margin-top: 5px;
 }
 
-tooltip {
-    background-color: #181825;
-    border: 2px solid #89b4fa;
+#custom-network.disconnected {
+    color: @error;
 }
