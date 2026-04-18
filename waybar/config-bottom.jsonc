@@ -13,6 +13,6 @@
         "on-click-right": "playerctl next",
         "on-click-middle": "playerctl previous",
         "tooltip": false,
-        "width":300
+        "width":500
     }
 }

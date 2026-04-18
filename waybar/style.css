@@ -7,7 +7,7 @@
     font-size: 14px;
     font-weight: 600;
     min-height: 0;
-    color:@surface_container_highest ;
+    color: @surface_container_highest ;
 }
 
 window#waybar {
@@ -22,7 +22,7 @@ tooltip {
 
 tooltip label {
     color: white;
-} 
+}
 
 #workspaces {
     margin-top: 8px;
@@ -33,22 +33,23 @@ tooltip label {
     margin: 0.4rem 0.25rem;
     border-radius: 6px;
     background-color: @primary;
-    
+
 }
 
- #workspaces button:hover {
-  color: #1e1e2e;
-} 
+#workspaces button:hover {
+    color: #1e1e2e;
+}
 
 #workspaces button.active {
-  background-color: #1e1e2e;
-  padding:0 15px;
-  color: #89b4fa;
+    background-color: #1e1e2e;
+    padding: 0 15px;
+    color: #89b4fa;
 }
 
 
 #mode,
-#clock,#clock.simpleclock {
+#clock,
+#clock.simpleclock {
     padding: 0 10px;
 }
 
@@ -57,7 +58,8 @@ tooltip label {
     border-bottom: 3px solid white;
 }
 
-#clock,#clock.simpleclock{
+#clock,
+#clock.simpleclock {
     background-color: @primary;
     border-radius: 10px;
     margin-top: 5px;
@@ -65,21 +67,22 @@ tooltip label {
 }
 
 #mpris {
-  padding: 0.3rem 0.6rem;
-  margin-top:5px;
-  margin-left:5px;
-  border-radius: 6px;
-  /* background-color: #181825; */
-  background-color:@primary
+    padding: 0.3rem 0.6rem;
+    margin-top: 5px;
+    margin-left: 5px;
+    border-radius: 6px;
+    /* background-color: #181825; */
+    background-color: @primary
 }
 
 #mpris.playing {
-  color: #739395;
+    color: #739395;
 }
 
 #mpris.paused {
-  color: #2d45a2;
+    color: #2d45a2;
 }
+
 @keyframes blink {
     to {
         background-color: @primary;
@@ -91,21 +94,15 @@ tooltip label {
     padding-left: 10px;
     padding-right: 10px;
     margin-top: 5px;
-    color:black;
+    color: black;
 }
 
 window#waybar.empty #window {
     background-color: transparent;
 }
 
-#network,
-#custom-power,
-#pulseaudio,
-#cpu,
-#memory,
-#custom-powered,
-#tray,
-#custom-notification{
+
+#custom-notification {
     padding: 0 10px;
     background-color: @primary;
     margin: 0 10px;
@@ -114,6 +111,71 @@ window#waybar.empty #window {
     margin-top: 5px;
 }
 
+#tray {
+    padding: 0 10px;
+    background-color: @primary;
+    margin: 0 10px;
+    color: black;
+    border-radius: 10px;
+    margin-top: 5px;
+}
+
+#custom-powered {
+    padding: 0 10px;
+    background-color: @primary;
+    margin: 0 10px;
+    color: black;
+    border-radius: 10px;
+    margin-top: 5px;
+}
+
+#memory {
+    padding: 0 10px;
+    background-color: @primary;
+    margin: 0 10px;
+    color: black;
+    border-radius: 10px;
+    margin-top: 5px;
+
+}
+
+#cpu {
+    padding: 0 10px;
+    background-color: @primary;
+    margin: 0 10px;
+    color: black;
+    border-radius: 10px;
+    margin-top: 5px;
+}
+
+#pulseaudio {
+    padding: 0 10px;
+    background-color: @primary;
+    margin: 0 10px;
+    color: black;
+    border-radius: 10px;
+    margin-top: 5px;
+
+}
+
+#custom-power {
+    padding: 0 10px;
+    background-color: @primary;
+    margin: 0 10px;
+    color: black;
+    border-radius: 10px;
+    margin-top: 5px;
+
+}
+
+#network {
+    padding: 0 10px;
+    background-color: @primary;
+    margin: 0 10px;
+    color: black;
+    border-radius: 10px;
+    margin-top: 5px;
+}
 
 tooltip {
     background-color: #181825;
